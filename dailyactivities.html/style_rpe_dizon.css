@@ -41,6 +41,9 @@ span {
 
 span:last-child {
     color: red;
+}
+
+span {
     padding-left: 5px;
 }
 

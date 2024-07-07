@@ -41,6 +41,7 @@ span {
 
 span:last-child {
     color: red;
+    width: 130px;
 }
 
 span {

@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BENG UTANG</title>
     <link rel="stylesheet" href="./style.css">
+        <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #card-one, #card-two, #card-three {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid green;
+            background-color:burlywood;
+        }
+
+        table {
+            border-spacing: 0;         /* Explicitly sets no spacing (for compatibility) */
+            border-collapse: collapse; /* Merges borders and removes spacing between cells */        
+        }
+
+        td, th {
+            padding: 5px;
+            border: 1px solid black;  /* Optional: Thin border around each cell for visibility */
+            text-align: center;        /* Optional: Centers text in cells */
+            text-transform: uppercase;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -84,9 +117,270 @@
     </ol>
     -->
 
-    
+        <h1>BENG UTANG</h1>
+
+
+    <div class="container">
+        <div id="card-one">
+            <table>
+                <h1>2023</h1>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>BAYAD</th>
+                    </tr>
+                </thead>
+                <tbody id="body-one">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="card-two">
+            <table>
+                <h1>2024</h1>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>BAYAD</th>
+                        <th>UTANG</th>
+                    </tr>
+                </thead>
+                <tbody id="body-two">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="card-three">
+            <table>
+                <h1>2025</h1>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>BAYAD</th>
+                    </tr>
+                </thead>
+                <tbody id="body-three">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- 
+
+    <ol>
+
+        
+
+
+        <h1>2025 Joy Utang 500</h1>
+        <li>April 7 = Bayad - 100</li>
+        <li>April 17 = Bayad - 100</li>
+        <li>April 30 = Bayad - 100</li>
+        <li>May  9 = Bayad - 100</li>
+        <li>May 19 = Bayad - 100</li>
+        <li>May 26 = Bayad - 100</li>
+        <li>June 14 = Bayad - 100</li>
+        <li>July 10 = Bayad - 100</li>
+        <li>July 19 = Bayad - 100</li>
+        <li>Aug 9 = Bayad - 100</li>
+        <li>Aug 21 = Bayad - 100</li>
+        <li>Aug 29 = Bayad - 100</li>
+        <li>Sept 13 = Bayad - 100</li>
+        <li>Sept 20 = Bayad - 100</li>
+        
+        <li>Sept 27 = Bayad - 100</li>
+        <li>October 3 = Bayad - 100</li>
+        <li>October 10 = Bayad - 100</li>
+        <li>October 16 = Bayad - 100</li>
+        <li>October 23 = Bayad - 100</li>
+        <li>October 31 = Bayad - 100</li>
+    </ol>
+    -->
+
+
+    <script>
+        
+        let tbody = document.getElementById('body-one');
+        let tbodyTwo = document.getElementById('body-two');
+        let tbodyThree = document.getElementById('body-three');
+
+        let array2023 = [
+            {date1: 'June 10', utang1: 100},
+            {date1: 'June 19', utang1: 100},
+            {date1: 'July 01', utang1: 100},
+            {date1: 'July 14', utang1: 100},
+            {date1: 'July 20', utang1: 100},
+            {date1: 'Aug 01', utang1: 100},
+            {date1: 'Aug 09', utang1: 100},
+            {date1: 'Aug 10', utang1: 1000},
+            {date1: 'Aug 17', utang1: 100},
+            {date1: 'Sept 6', utang1: 100},
+            {date1: 'Sept 12', utang1: 100},
+            {date1: 'Sept 20', utang1: 100},
+            {date1: 'Oct 04', utang1: 100},
+            {date1: 'Oct 14', utang1: 100},
+            {date1: 'Nov 18', utang1: 100},
+            {date1: 'Dec 08', utang1: 100}
+        ];
+
+        let array2024 = [
+            {date1: 'Jan 04', utang1: 100},
+            {date1: 'Jan 14', utang1: 200},
+            {date1: 'Feb 13', utang1: 100},
+            {date1: 'Feb 27', utang1: 100},
+            {date1: 'March 12', utang1: 100},
+            {date1: 'March 20', utang1: 100},
+            {date1: 'March 25', utang1: 100},
+            {date1: 'April 01', utang1: 600},
+            {date1: 'April 05', utang1: 100},
+            {date1: 'April 13', utang1: 100},
+            {date1: 'April 24', utang1: 100},
+            {date1: 'May 03', utang1: 100},
+            {date1: 'May 11', utang1: 100},
+            {date1: 'May 21', utang1: 100},
+            {date1: 'June 03', utang1: 100},
+            {date1: 'June 08', utang1: 100},
+            {date1: 'June 24', utang1: 100},
+            {date1: 'July 03', utang1: 100},
+            {date1: 'July 09', utang1: 100},
+            {date1: 'Aug 03', utang1: 300},
+            {date1: 'Aug 10', utang1: 100},
+            {date1: 'Aug 18', utang1: 100},
+            {date1: 'Sept 01', utang1: 300},
+            {date1: 'Oct 12', utang1: 100},
+            {date1: 'Oct 19', utang1: 100}
+        ];
+
+        let array2025 = [
+            {date1: 'April 07', utang1: 100},
+            {date1: 'April 17', utang1: 100},
+            {date1: 'April 30', utang1: 100},
+            {date1: 'May 09', utang1: 100},
+            {date1: 'May 19', utang1: 100},
+            {date1: 'May 26', utang1: 100},
+            {date1: 'June 14', utang1: 100},
+            {date1: 'July 10', utang1: 100},
+            {date1: 'July 19', utang1: 100},
+            {date1: 'Aug 09', utang1: 100},
+            {date1: 'Aug 21', utang1: 100},
+            {date1: 'Aug 29', utang1: 100},
+            {date1: 'Sept 13', utang1: 100},
+            {date1: 'Sept 20', utang1: 100},
+            {date1: 'Sept 27', utang1: 100},
+            {date1: 'Oct 03', utang1: 100},
+            {date1: 'Oct 10', utang1: 100},
+            {date1: 'Oct 16', utang1: 100},
+            {date1: 'Oct 23', utang1: 100},
+            {date1: 'Oct 31', utang1: 100}
+        ]
+
+        let amt = 0;
+
+        for(let x = 0; x < array2023.length; x++){
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            td1.textContent = array2023[x].date1;
+            td2.textContent = array2023[x].utang1;
+            tr.append(td1);
+            tr.append(td2);
+            tbody.append(tr);
+            amt += array2023[x].utang1;
+            if(amt == 2500){
+                td1.textContent = "TOTAL";
+                td2.textContent = amt;
+                tr.append(td1);
+                tr.append(td2);
+                tbody.append(tr);
+                td1.style.color = 'red';
+                td2.style.color = 'red';
+                td1.style.fontWeight = 'bold';
+                td2.style.fontWeight = 'bold';
+            }
+        }
+
+        amt = 0;
+        let amt2 = 0;
+
+        for(let y = 0; y < array2024.length; y++){
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            td1.textContent = array2024[y].date1;
+            
+            if(array2024[y].utang1 > 100){
+                td3.textContent = array2024[y].utang1;
+                amt2 += array2024[y].utang1;
+            } else {
+                td2.textContent = array2024[y].utang1;
+                amt += array2024[y].utang1;
+            }
+
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            tbodyTwo.append(tr);
+            
+            if(amt == 2100){
+                td1.textContent = "TOTAL";
+                td2.textContent = amt;
+                td3.textContent = amt2;
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+                tbodyTwo.append(tr);
+                td1.style.color = 'red';
+                td2.style.color = 'red';
+                td3.style.color = 'red';
+                td1.style.fontWeight = 'bold';
+                td2.style.fontWeight = 'bold';
+                td3.style.fontWeight = 'bold';
+            }
+        }
+
+        amt = 0;
+        for(let z = 0; z < array2025.length; z++){
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            td1.textContent = array2025[z].date1;
+            td2.textContent = array2025[z].utang1;
+            tr.append(td1);
+            tr.append(td2);
+            tbodyThree.append(tr);
+            amt +=  array2025[z].utang1;
+        }
+
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        td1.textContent = "TOTAL";
+        td2.textContent = amt;
+                
+        tr.append(td1);
+        tr.append(td2);
+        tbodyThree.append(tr);
+        td1.style.color = 'red';
+        td2.style.color = 'red';        
+        td1.style.fontWeight = 'bold';
+        td2.style.fontWeight = 'bold';
+        
+
+    </script>
 </body>
 </html>
+
 
 
 

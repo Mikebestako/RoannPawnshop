@@ -262,6 +262,7 @@
         ];
 
         let array2025 = [
+            {date1: 'April 05', utang1: 500},
             {date1: 'April 07', utang1: 100},
             {date1: 'April 17', utang1: 100},
             {date1: 'April 30', utang1: 100},
@@ -274,6 +275,9 @@
             {date1: 'Aug 09', utang1: 100},
             {date1: 'Aug 21', utang1: 100},
             {date1: 'Aug 29', utang1: 100},
+            {date1: 'Aug 31'. utang1: 300},
+
+            {date1: 'Sept 10', utang1: 300},
             {date1: 'Sept 13', utang1: 100},
             {date1: 'Sept 20', utang1: 100},
             {date1: 'Sept 27', utang1: 100},
@@ -281,7 +285,12 @@
             {date1: 'Oct 10', utang1: 100},
             {date1: 'Oct 16', utang1: 100},
             {date1: 'Oct 23', utang1: 100},
-            {date1: 'Oct 31', utang1: 100}
+            {date1: 'Oct 31', utang1: 100},
+            {date1: 'Nov 03', utang1: 300},
+            {date1: 'Nov 08', utang1: 100},
+            {date1: 'Nov 14', utang1: 100},
+            {date1: 'Nov 18', utang1: 300},
+            {date1: 'Nov 23', utang1: 150}
         ]
 
         let amt = 0;
@@ -354,10 +363,20 @@
             let tr = document.createElement('tr');
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
             td1.textContent = array2025[z].date1;
-            td2.textContent = array2025[z].utang1;
+
+            if(array2025[z].utang1 > 100){
+                td3.textContent = array2025[z].utang1;
+                amt2 += array2025[z].utang1;
+            } else {
+                td2.textContent = array2025[z].utang1;
+                amt += array2025[z].utang1;
+            }
+            
             tr.append(td1);
             tr.append(td2);
+            tr.append(td3);
             tbodyThree.append(tr);
             amt +=  array2025[z].utang1;
         }
@@ -380,6 +399,7 @@
     </script>
 </body>
 </html>
+
 
 
 

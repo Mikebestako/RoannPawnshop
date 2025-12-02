@@ -379,28 +379,32 @@
             tr.append(td2);
             tr.append(td3);
             tbodyThree.append(tr);
-            if(amt == 2200){
-                td1.textContent = "TOTAL";
-                td2.textContent = amt;
-                td3.textContent = amt2;
-                tr.append(td1);
-                tr.append(td2);
-                tr.append(td3);
-                tbodyThree.append(tr);
-                td1.style.color = 'red';
-                td2.style.color = 'red';
-                td3.style.color = 'red';
-                td1.style.fontWeight = 'bold';
-                td2.style.fontWeight = 'bold';
-                td3.style.fontWeight = 'bold';
-                break;
-            }
         }
+
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+        td1.textContent = "TOTAL";
+        td2.textContent = amt;
+        td3.textContent = amt2;
+                
+        tr.append(td1);
+        tr.append(td2);
+        tr.append(td3);
+        tbodyThree.append(tr);
+        td1.style.color = 'red';
+        td2.style.color = 'red';   
+        td3.style.color = 'red';     
+        td1.style.fontWeight = 'bold';
+        td2.style.fontWeight = 'bold';
+        td3.style.fontWeight = 'bold';
         
 
     </script>
 </body>
 </html>
+
 
 
 

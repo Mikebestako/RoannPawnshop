@@ -275,7 +275,7 @@
             {date1: 'Aug 09', utang1: 100},
             {date1: 'Aug 21', utang1: 100},
             {date1: 'Aug 29', utang1: 100},
-            {date1: 'Aug 31'. utang1: 300},
+            {date1: 'Aug 31', utang1: 300},
 
             {date1: 'Sept 10', utang1: 300},
             {date1: 'Sept 13', utang1: 100},
@@ -359,6 +359,7 @@
         }
 
         amt = 0;
+        amt2 = 0;
         for(let z = 0; z < array2025.length; z++){
             let tr = document.createElement('tr');
             let td1 = document.createElement('td');
@@ -373,32 +374,34 @@
                 td2.textContent = array2025[z].utang1;
                 amt += array2025[z].utang1;
             }
-            
+
             tr.append(td1);
             tr.append(td2);
             tr.append(td3);
             tbodyThree.append(tr);
-            amt +=  array2025[z].utang1;
+            if(amt == 2200){
+                td1.textContent = "TOTAL";
+                td2.textContent = amt;
+                td3.textContent = amt2;
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+                tbodyThree.append(tr);
+                td1.style.color = 'red';
+                td2.style.color = 'red';
+                td3.style.color = 'red';
+                td1.style.fontWeight = 'bold';
+                td2.style.fontWeight = 'bold';
+                td3.style.fontWeight = 'bold';
+                break;
+            }
         }
-
-        let tr = document.createElement('tr');
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        td1.textContent = "TOTAL";
-        td2.textContent = amt;
-                
-        tr.append(td1);
-        tr.append(td2);
-        tbodyThree.append(tr);
-        td1.style.color = 'red';
-        td2.style.color = 'red';        
-        td1.style.fontWeight = 'bold';
-        td2.style.fontWeight = 'bold';
         
 
     </script>
 </body>
 </html>
+
 
 
 

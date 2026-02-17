@@ -449,6 +449,22 @@
             tr.append(td2);
             tr.append(td3);
             tbodyFour.append(tr);
+
+            if(amt == 300){
+                td1.textContent = "TOTAL";
+                td2.textContent = amt;
+                td3.textContent = amt2;
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+                tbodyFour.append(tr);
+                td1.style.color = 'red';
+                td2.style.color = 'red';
+                td3.style.color = 'red';
+                td1.style.fontWeight = 'bold';
+                td2.style.fontWeight = 'bold';
+                td3.style.fontWeight = 'bold';
+            }
         }
     /*
         let tr = document.createElement('tr');
@@ -473,6 +489,7 @@
     </script>
 </body>
 </html>
+
 
 
 

@@ -430,19 +430,19 @@
         
         amt = 0;
         amt2 = 0;
-        for(let z = 0; z < array2026.length; z++){
+        for(let w = 0; w < array2026.length; w++){
             let tr = document.createElement('tr');
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             let td3 = document.createElement('td');
-            td1.textContent = array2026[z].date1;
+            td1.textContent = array2026[w].date1;
 
-            if(array2026[z].utang1 > 150){
-                td3.textContent = array2026[z].utang1;
-                amt2 += array2026[z].utang1;
+            if(array2026[w].utang1 > 150){
+                td3.textContent = array2026[w].utang1;
+                amt2 += array2026[w].utang1;
             } else {
-                td2.textContent = array2026[z].utang1;
-                amt += array2026[z].utang1;
+                td2.textContent = array2026[w].utang1;
+                amt += array2026[w].utang1;
             }
 
             tr.append(td1);
@@ -472,6 +472,7 @@
     </script>
 </body>
 </html>
+
 
 
 

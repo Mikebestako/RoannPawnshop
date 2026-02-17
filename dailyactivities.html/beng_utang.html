@@ -445,10 +445,7 @@
                 amt += array2026[w].utang1;
             }
 
-            tr.append(td1);
-            tr.append(td2);
-            tr.append(td3);
-            tbodyFour.append(tr);
+
 
             if(amt == 300){
                 td1.textContent = "TOTAL";
@@ -464,6 +461,11 @@
                 td1.style.fontWeight = 'bold';
                 td2.style.fontWeight = 'bold';
                 td3.style.fontWeight = 'bold';
+            } else {
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+                tbodyFour.append(tr);
             }
         }
     /*
@@ -489,6 +491,7 @@
     </script>
 </body>
 </html>
+
 
 
 
